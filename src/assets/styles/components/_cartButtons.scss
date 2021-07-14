@@ -1,0 +1,102 @@
+.cart__header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+
+	.buttons__right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+	}
+
+	.button__common {
+		border-radius: 20px;
+		padding: 5px 15px;
+		.MuiButton-label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			p {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+			svg {
+				transition: all 0.3s ease-in-out;
+				transform: scale(1.5);
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	.button__back {
+		&:hover {
+			background-color: transparent;
+
+			.MuiButton-label {
+				svg {
+					transform: scale(1.5) translateX(-5px);
+				}
+			}
+		}
+		.MuiTouchRipple-root {
+			color: rgba(63, 43, 59, 1);
+		}
+		.MuiButton-label {
+			p {
+				color: $primary-text-color;
+			}
+			svg {
+				color: $primary-text-color;
+			}
+		}
+	}
+
+	.button__payment {
+		background-color: $primary-main-color;
+		&:hover {
+			background-color: $primary-main-color;
+
+			.MuiButton-label {
+				svg {
+					transform: scale(1.5) translateX(5px);
+				}
+			}
+		}
+		.MuiTouchRipple-root {
+			color: rgb(10, 250, 174);
+		}
+		.MuiButton-label {
+			p {
+				color: $secondary-bg-color;
+			}
+			svg {
+				color: $secondary-bg-color;
+			}
+		}
+	}
+
+	.button__clear {
+		&:hover {
+			background-color: transparent;
+			.MuiButton-label {
+				svg {
+					transform: scale(1.7);
+				}
+			}
+		}
+		.MuiTouchRipple-root {
+			color: rgba(246, 68, 107, 1);
+		}
+		.MuiButton-label {
+			p {
+				color: $secondary-main-color;
+			}
+			svg {
+				color: $secondary-main-color;
+			}
+		}
+	}
+}

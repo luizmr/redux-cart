@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Routes } from './routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// json
+import Client from './data/client.json';
 
-export default App;
+// utils
+import { connect } from 'react-redux';
+import { setUser } from './store/Authentication/auth-actions';
+
+const App = ({ user }) => {
+	useEffect(() => {
+		if (!user) {
+			localStorage.setItem('client', JSON.stringify(Client.client));
+			setUser(Client.client);
+		}
+	}, [user]);
+	return (
+		<>
+			<Routes />
+		</>
+	);
+};
+
+const mapStateToProps = (state) => {
+	return {
+		user: state.auth.user,
+	};
+};
+
+export default connect(mapStateToProps, { setUser })(App);

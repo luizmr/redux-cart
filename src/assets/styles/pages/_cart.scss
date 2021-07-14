@@ -1,0 +1,24 @@
+.cart {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	justify-content: flex-start;
+	padding: 50px 30px 30px 10px;
+	gap: 10px;
+
+	.cart__summary {
+		display: grid;
+		grid-template-columns: 1fr 300px;
+		justify-content: flex-start;
+		gap: 30px;
+		margin-top: 20px;
+
+		.summary {
+			display: flex;
+			justify-content: flex-start;
+			gap: 20px;
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+}

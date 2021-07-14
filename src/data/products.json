@@ -1,0 +1,242 @@
+[
+	{
+		"name": "SHAMPOO INTERN",
+		"cod": 4123,
+		"maker": "VITAMED",
+		"price": {
+			"price": 16.92,
+			"finalPrice": 16.92,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 100,
+			"pmcPrice": 200
+		},
+		"quantityAvailable": 99,
+		"imageURL": "https://www.farmaciaseconomizar.com.br/BACKOFFICE/Uploads/Produto/Ampliada/7898352911104.jpg"
+	},
+	{
+		"name": "PROTEIN CRISP BAR DOCE LEITE",
+		"cod": 4121,
+		"maker": "INTEGRALMEDICA",
+		"price": {
+			"price": 45.79,
+			"finalPrice": 45.79,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 100,
+			"pmcPrice": 200
+		},
+		"quantityAvailable": 0,
+		"imageURL": "https://a-static.mlcdn.com.br/1500x1500/protein-crisp-bar-12-unidades-integral-medica-churros-c-doce-de-leite-integralmedica/reidossuplementosmauadistri/0e157f38db3f11ea9aa04201ac18501e/cf43d57c24e3dd1b58f668e4b8bd257d.jpg"
+	},
+	{
+		"name": "AGUA MICELAR ROSA MOSQUETA",
+		"cod": 4113,
+		"maker": "PROLINK",
+		"price": {
+			"price": 9.99,
+			"finalPrice": 9.99,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 100,
+			"pmcPrice": 200
+		},
+		"quantityAvailable": 53,
+		"imageURL": "https://cdn.awsli.com.br/600x450/375/375178/produto/99590469/403e3794c5.jpg"
+	},
+	{
+		"name": "EXTRATO PROPOLIS C/30CPS",
+		"cod": 3323,
+		"maker": "GLOBO",
+		"price": {
+			"price": 16.28,
+			"finalPrice": 16.28,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 25,
+			"pmcPrice": 24.99
+		},
+		"quantityAvailable": 1211,
+		"imageURL": "https://a-static.mlcdn.com.br/618x463/extrato-de-propolis-20-ml-apis-vida/veganmarket/727p/a2be10c03cec8dc13fc799a33380f7af.jpg"
+	},
+	{
+		"name": "ZINCO 29,59MG C/60CPR REV",
+		"cod": 3123,
+		"maker": "GLOBO",
+		"price": {
+			"price": 12.99,
+			"finalPrice": 12.99,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 24,
+			"pmcPrice": 25.7
+		},
+		"quantityAvailable": 1143,
+		"imageURL": "https://unicpharma.vteximg.com.br/arquivos/ids/162535-1000-1000/Zinco-quelato-50mg.jpg?v=636915627839900000"
+	},
+	{
+		"name": "ZINCO 29,59MG C/30CPR REV",
+		"cod": 5121,
+		"maker": "GLOBO",
+		"price": {
+			"price": 6.56,
+			"finalPrice": 6.56,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 12,
+			"pmcPrice": 14.27
+		},
+		"quantityAvailable": 1026,
+		"imageURL": "https://unicpharma.vteximg.com.br/arquivos/ids/162535-1000-1000/Zinco-quelato-50mg.jpg?v=636915627839900000"
+	},
+	{
+		"name": "PH CREAM LEAVE-IN FOR MEN",
+		"cod": 8323,
+		"maker": "BIOCUTHIS",
+		"price": {
+			"price": 59.6,
+			"finalPrice": 59.6,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 59.6,
+			"pmcPrice": 130.76
+		},
+		"quantityAvailable": 207,
+		"imageURL": "https://http2.mlstatic.com/D_NQ_NP_784787-MLB44454454135_122020-W.jpg"
+	},
+	{
+		"name": "SOLUCAO FISIOLOGICA 500ML",
+		"cod": 1123,
+		"maker": "RIOQUIMICA",
+		"price": {
+			"price": 2.65,
+			"finalPrice": 2.65,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 3.12,
+			"pmcPrice": 4.19
+		},
+		"quantityAvailable": 725,
+		"imageURL": "https://www.farmadelivery.com.br/media/catalog/product/cache/1/image/720x/9df78eab33525d08d6e5fb8d27136e95/c/l/cloreto-de-sodio-farmax-0-9-soluc-o-fisiologica-500ml.jpg"
+	},
+	{
+		"name": "SOLUCAO FISIOLOGICA 250ML",
+		"cod": 9123,
+		"maker": "RIOQUIMICA",
+		"price": {
+			"price": 2.19,
+			"finalPrice": 2.19,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 2.58,
+			"pmcPrice": 3.47
+		},
+		"quantityAvailable": 618,
+		"imageURL": "https://www.farmadelivery.com.br/media/catalog/product/cache/1/image/720x/9df78eab33525d08d6e5fb8d27136e95/c/l/cloreto-de-sodio-farmax-0-9-soluc-o-fisiologica-500ml.jpg"
+	},
+	{
+		"name": "SOLUCAO FISIOLOGICA 100ML",
+		"cod": 7823,
+		"maker": "RIOQUIMICA",
+		"price": {
+			"price": 1.71,
+			"finalPrice": 1.71,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 2.02,
+			"pmcPrice": 2.71
+		},
+		"quantityAvailable": 569,
+		"imageURL": "https://www.farmadelivery.com.br/media/catalog/product/cache/1/image/720x/9df78eab33525d08d6e5fb8d27136e95/c/l/cloreto-de-sodio-farmax-0-9-soluc-o-fisiologica-500ml.jpg"
+	},
+	{
+		"name": "SHAMPOO FRESH CLEAN 300ML",
+		"cod": 5621,
+		"maker": "BIOCUTHIS",
+		"price": {
+			"price": 29.8,
+			"finalPrice": 29.8,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 29.8,
+			"pmcPrice": 69.9
+		},
+		"quantityAvailable": 302,
+		"imageURL": "https://http2.mlstatic.com/D_NQ_NP_737398-MLB44472795154_012021-O.jpg"
+	},
+	{
+		"name": "CONDICIONADOR 250ML",
+		"cod": 9983,
+		"maker": "BIOCUTHIS",
+		"price": {
+			"price": 32.7,
+			"finalPrice": 32.7,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 32.7,
+			"pmcPrice": 69.9
+		},
+		"quantityAvailable": 302,
+		"imageURL": "https://bioextratusvirtual.vteximg.com.br/arquivos/ids/159380-1000-1000/Bio-Extratus--Brilho-Condicionador-250mL.jpg?v=637364577460800000"
+	},
+	{
+		"name": "SHAMPOO 300ML",
+		"cod": 9783,
+		"maker": "BIOCUTHIS",
+		"price": {
+			"price": 32.7,
+			"finalPrice": 32.7,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 32.7,
+			"pmcPrice": 69.9
+		},
+		"quantityAvailable": 297,
+		"imageURL": "https://images.tcdn.com.br/img/img_prod/394642/condicionador_fortalecedor_250ml_38_1_20200727154852.png"
+	},
+	{
+		"name": "COMPRIMIDO LARANJA",
+		"cod": 8253,
+		"maker": "AIRELA",
+		"price": {
+			"price": 13.68,
+			"finalPrice": 13.68,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 34.1,
+			"pmcPrice": 45.42
+		},
+		"quantityAvailable": 260,
+		"imageURL": "https://uploads.consultaremedios.com.br/product_images/full/765ad9fc7758563e28adebe1362b52038dbd6b1e.?1611635605"
+	},
+	{
+		"name": "GEL CAPILAR",
+		"cod": 6129,
+		"maker": "AIRELA",
+		"price": {
+			"price": 9.93,
+			"finalPrice": 9.93,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 26.33,
+			"pmcPrice": 35.08
+		},
+		"quantityAvailable": 65,
+		"imageURL": "https://img.drogaraia.com.br/catalog/product/g/e/gel-fixador-ny-looks-m_dia-fixacao-com-240g-1.jpg?width=520&height=520&quality=50&type=resize"
+	},
+	{
+		"name": "DORFLEX CAIXA",
+		"cod": 5454,
+		"maker": "AIRELA",
+		"price": {
+			"price": 46.38,
+			"finalPrice": 46.38,
+			"taxes": 0,
+			"discount": 0,
+			"industryPrice": 46.38,
+			"pmcPrice": 61.79
+		},
+		"quantityAvailable": 0,
+		"imageURL": "https://araujo.vteximg.com.br/arquivos/ids/4079876-1000-1000/07891058020941.jpg"
+	}
+]

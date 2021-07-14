@@ -1,0 +1,168 @@
+.products {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: flex-start;
+
+	.products__page {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 30px;
+		padding: 50px 20px;
+
+		.products__pageFilter {
+			display: grid;
+			grid-template-columns: 50% 1fr;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 40px;
+
+			.products__pageOrdenation {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 20px;
+			}
+			.orderBy {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 10px;
+
+				.orderBy__label {
+					font-weight: 600;
+					font-size: 0.8rem;
+					color: #004374;
+				}
+
+				.orderBy__select {
+					position: relative;
+					background-color: $secondary-bg-color;
+					border-radius: 20px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					svg {
+						cursor: pointer;
+						color: $primary-text-color;
+						margin-right: 10px;
+						transform: scale(2);
+					}
+				}
+			}
+		}
+
+		.products__loading {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 200px;
+			width: 100%;
+
+			svg {
+				color: $third-main-color;
+				transform: scale(4);
+			}
+		}
+
+		.products__pageContent {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+			gap: 30px;
+			flex-direction: column;
+
+			.products__cards {
+				// display: grid;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				// grid-template-columns: 500px 500px;
+				width: 100%;
+				gap: 20px;
+
+				.not-found {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 100px;
+
+					p {
+						font-size: 1.2rem;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.products__pagination {
+			.MuiPaginationItem-page.Mui-selected {
+				background-color: $primary-main-color;
+				color: $secondary-bg-color;
+			}
+		}
+	}
+
+	.justify-column-start {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.products__sideFilter {
+		border-left: 2px solid #e9e7f0;
+		padding: 30px 0 30px 30px;
+		gap: 40px;
+
+		.filter__topic {
+			gap: 10px;
+			position: relative;
+
+			.topic__title {
+				text-transform: uppercase;
+				font-size: 1rem;
+				font-weight: 700;
+				color: $third-main-color;
+			}
+
+			.topic__checkboxes {
+				transform: translateX(10px);
+				gap: 10px;
+				position: relative;
+				width: calc(100% - 30px);
+
+				.MuiIconButton-root {
+					transition: all 0.3s ease-in-out;
+					padding: 3px;
+					&:hover {
+						background-color: rgba(64, 43, 60, 0.1) !important;
+					}
+				}
+
+				.MuiFormControlLabel-root {
+					margin-right: 0;
+				}
+
+				.MuiTypography-root {
+					font-size: 0.7rem;
+					font-weight: 600;
+					text-transform: uppercase;
+					color: $primary-text-color;
+					transform: translateY(1px);
+				}
+
+				.MuiSvgIcon-root {
+					width: 1rem;
+					height: 1rem;
+				}
+
+				.MuiCheckbox-colorSecondary.Mui-checked,
+				.MuiTouchRipple-root {
+					color: $primary-text-color;
+				}
+			}
+		}
+	}
+}
