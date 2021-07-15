@@ -9,6 +9,9 @@ import Menu from './components/Menu/Menu';
 import Cart from './pages/Cart/Cart';
 import ProductInfo from './pages/ProductInfo/ProductInfo';
 
+// utils
+import MediaQueryChecker from './utils/mediaQueryChecker';
+
 const CustomRoute = ({ key, Component, path }) => (
 	<Route exact key={key} path={path} component={Component} />
 );
@@ -31,7 +34,7 @@ const routeOptions = [
 ];
 
 export const Routes = () => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(MediaQueryChecker() ? false : true);
 	return (
 		<Router>
 			<ScrollToTop />

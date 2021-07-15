@@ -12,11 +12,13 @@ const TabSummary = ({ items, activeArray }) => {
 				{(activeArray[0] || activeArray[1]) && (
 					<ProductsCard items={items} />
 				)}
-				{(activeArray[0] || activeArray[2]) && <ClientCard />}
+				{activeArray[0] && <ClientCard />}
 			</div>
-			<div className="total">
-				<TotalCard />
-			</div>
+			{activeArray[0] && (
+				<div className="total">
+					<TotalCard />
+				</div>
+			)}
 		</div>
 	);
 };

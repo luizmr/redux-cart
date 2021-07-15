@@ -17,7 +17,7 @@ const ProductsCard = ({ items }) => {
 			{items.length ? (
 				<>
 					{items.map((obj) => (
-						<ProductInfoCart key={obj.cod} />
+						<ProductInfoCart key={obj.cod} obj={obj} />
 					))}
 				</>
 			) : (

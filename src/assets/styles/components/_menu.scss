@@ -69,3 +69,14 @@
 		}
 	}
 }
+
+@media (max-width: 1100px) {
+	.menu {
+		height: 100%;
+		width: 300px;
+		position: fixed;
+		top: 83px;
+		left: 0;
+		z-index: 1000;
+	}
+}
