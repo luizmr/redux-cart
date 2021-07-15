@@ -5,22 +5,16 @@ import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import { FiTrash, FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 
-export default function CartButtons({ handleDeleteItems, cart }) {
-	const history = useHistory();
+// utils
+import ReducePrice from '../../utils/reducePrice';
 
+const CartButtons = ({ handleDeleteItems, cart, toPayment }) => {
+	const history = useHistory();
 	const [finalPrice, setFinalPrice] = useState(0);
 
 	useEffect(() => {
 		if (cart.length) {
-			const priceArray = [];
-			cart.forEach((obj) => {
-				if (obj.price) {
-					const price = obj.price.price * obj.quantity;
-					priceArray.push(price);
-				}
-			});
-
-			setFinalPrice(priceArray.reduce((acc, curr) => acc + curr, 0));
+			setFinalPrice(ReducePrice(cart));
 		} else {
 			setFinalPrice(0);
 		}
@@ -30,7 +24,9 @@ export default function CartButtons({ handleDeleteItems, cart }) {
 		<div className="cart__header">
 			<Button
 				className="button__back button__common"
-				onClick={() => history.push('/')}
+				onClick={() => {
+					history.push('/');
+				}}
 			>
 				<FiArrowLeft />
 				<p>Voltar</p>
@@ -40,9 +36,15 @@ export default function CartButtons({ handleDeleteItems, cart }) {
 					{finalPrice >= 150 && (
 						<Button
 							className="button__payment button__common"
-							onClick={() => history.push('/')}
+							onClick={() => {
+								!toPayment && history.push('/cart');
+							}}
 						>
-							<p>Ir para pagamento</p>
+							<p>
+								{toPayment
+									? 'Ir para pagamento'
+									: 'Ir para o Carrinho'}
+							</p>
 							<FiArrowRight />
 						</Button>
 					)}
@@ -57,4 +59,6 @@ export default function CartButtons({ handleDeleteItems, cart }) {
 			)}
 		</div>
 	);
-}
+};
+
+export default CartButtons;

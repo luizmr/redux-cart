@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // material-ui/icons
 import { Button } from '@material-ui/core';
@@ -6,7 +6,26 @@ import { Button } from '@material-ui/core';
 // components
 import InfoDiv from '../InfoDiv/InfoDiv';
 
-export default function ClientCard() {
+// utils
+import FormatCnpj from '../../utils/formatCnpj';
+
+const ClientCard = () => {
+	const [client, setClient] = useState({
+		name: 'Indefindo',
+		cnpj: FormatCnpj('00000000000000'),
+	});
+
+	useEffect(() => {
+		if (localStorage.getItem('client')) {
+			setClient({
+				name: JSON.parse(localStorage.getItem('client')).name,
+				cnpj: FormatCnpj(
+					JSON.parse(localStorage.getItem('client')).cnpj,
+				),
+			});
+		}
+	}, [localStorage.getItem('client')]);
+
 	return (
 		<div className="summary__client">
 			<div className="client__header">
@@ -20,19 +39,18 @@ export default function ClientCard() {
 				<div className="client__cnpj">
 					<InfoDiv
 						title="Razão Social"
-						info="FARMACIA DA ILHA"
+						info={`${client.name}`}
 						spanClass="info__string"
 					/>
 					<InfoDiv
 						title="CNPJ"
-						info={`${'12312312312312'.replace(
-							/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
-							'$1.$2.$3/$4-$5',
-						)}`}
+						info={`${client.cnpj}`}
 						spanClass="info__string"
 					/>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
+
+export default ClientCard;

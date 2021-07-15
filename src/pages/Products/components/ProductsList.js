@@ -6,12 +6,12 @@ import Pagination from '@material-ui/lab/Pagination';
 // components
 import ProductSimpleCard from '../../../components/ProductSimpleCard/ProductSimpleCard';
 
-export default function ProductsList({
+const ProductsList = ({
 	filteredProducts,
 	pagination,
 	page,
 	handleChangePage,
-}) {
+}) => {
 	return (
 		<>
 			<div className="products__pageContent">
@@ -45,4 +45,6 @@ export default function ProductsList({
 			</div>
 		</>
 	);
-}
+};
+
+export default ProductsList;

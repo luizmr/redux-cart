@@ -7,13 +7,7 @@ import { FormControl, MenuItem, Select } from '@material-ui/core';
 // styles
 import useOrderByClass from './SelectStyle';
 
-export default function SelectFilter({
-	options,
-	label,
-	iconScale,
-	handleChange,
-	value,
-}) {
+const SelectFilter = ({ options, label, iconScale, handleChange, value }) => {
 	const [openSelect, setOpenSelect] = useState(false);
 	const orderByClass = useOrderByClass();
 	const iconClick = () => setOpenSelect(!openSelect);
@@ -49,4 +43,6 @@ export default function SelectFilter({
 			</div>
 		</div>
 	);
-}
+};
+
+export default SelectFilter;

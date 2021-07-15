@@ -13,20 +13,15 @@ import ConvertToBrl from '../../utils/convertToBrl';
 
 // utils
 import { connect } from 'react-redux';
+import ReducePrice from '../../utils/reducePrice';
 
 const Navbar = ({ user, cart }) => {
 	const [finalPrice, setFinalPrice] = useState(0);
 	const history = useHistory();
 	useEffect(() => {
 		if (cart.length) {
-			const priceArray = [];
-			cart.forEach((obj) => {
-				if (obj.price) {
-					const price = obj.price.price * obj.quantity;
-					priceArray.push(price);
-				}
-			});
-			setFinalPrice(priceArray.reduce((acc, curr) => acc + curr, 0));
+			console.log(ReducePrice(cart));
+			setFinalPrice(ReducePrice(cart));
 		} else {
 			setFinalPrice(0);
 		}
@@ -47,7 +42,6 @@ const Navbar = ({ user, cart }) => {
 						onClick={() => history.push('/cart')}
 					>
 						<FiShoppingCart />
-
 						<p>{ConvertToBrl(finalPrice)}</p>
 					</Button>
 					<p>Pedido mínimo: R$ 150,00</p>

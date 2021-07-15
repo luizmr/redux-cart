@@ -30,7 +30,11 @@ const Cart = ({ cart, removeAllFromCart }) => {
 
 	return (
 		<div className="cart">
-			<CartButtons handleDeleteItems={removeAllFromCart} cart={cart} />
+			<CartButtons
+				handleDeleteItems={removeAllFromCart}
+				cart={cart}
+				toPayment={true}
+			/>
 			<CartTabs
 				tabArray={TabArray}
 				activeArray={activeTabArray}

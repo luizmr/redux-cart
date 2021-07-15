@@ -5,7 +5,7 @@ import ProductsCard from '../../../components/ProductsCard/ProductsCard';
 import ClientCard from '../../../components/ClientCard/ClientCard';
 import TotalCard from '../../../components/TotalCard/TotalCard';
 
-export default function TabSummary({ items, activeArray }) {
+const TabSummary = ({ items, activeArray }) => {
 	return (
 		<div className="cart__summary">
 			<div className="summary">
@@ -19,4 +19,6 @@ export default function TabSummary({ items, activeArray }) {
 			</div>
 		</div>
 	);
-}
+};
+
+export default TabSummary;

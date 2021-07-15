@@ -10,7 +10,7 @@ import ProductFilter from './components/ProductFilter';
 import ProductsData from '../../data/products.json';
 import ProductsList from './components/ProductsList';
 
-export default function Products() {
+const Products = () => {
 	const [filteredProducts, setFilteredProducts] = useState([]);
 	const [products, setProducts] = useState([]);
 	const [pagination, setPagination] = useState(0);
@@ -49,12 +49,12 @@ export default function Products() {
 		return data.sort((a, b) => b.name.localeCompare(a.name));
 	};
 
-	const handleSearch = (p, o, d, s) => {
+	const handleSearch = (pageSize, order, data, filter) => {
 		setLoading(true);
-		const productFilteredByString = d
-			? s
+		const productFilteredByString = data
+			? filter
 				? ProductsData
-				: d.filter((obj) => {
+				: data.filter((obj) => {
 						return (
 							obj.name.toLowerCase().indexOf(searchString) !== -1
 						);
@@ -64,17 +64,17 @@ export default function Products() {
 			  });
 
 		const productFilteredByOrder = filterByOrder(
-			o,
+			order,
 			productFilteredByString,
 		);
 		setProducts(productFilteredByOrder);
 		const productFilteredByPageSize = productFilteredByOrder.slice(
 			0,
-			Number(p),
+			Number(pageSize),
 		);
 		setTimeout(() => {
 			setFilteredProducts(productFilteredByPageSize);
-			handlePageSize(p, productFilteredByOrder);
+			handlePageSize(pageSize, productFilteredByOrder);
 			setPage(1);
 			setLoading(false);
 		}, 1500);
@@ -141,4 +141,6 @@ export default function Products() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Products;

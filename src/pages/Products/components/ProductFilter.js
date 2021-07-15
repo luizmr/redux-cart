@@ -7,6 +7,9 @@ import { FaSearch } from 'react-icons/fa';
 import SelectFilter from '../../../components/SelectFilter/SelectFilter';
 import { SearchBox } from '../styles/styles';
 
+// utils
+import selectOptions from './selectOptions';
+
 export default function ProductFilter({
 	handleChangeOrder,
 	handleChangePageSize,
@@ -16,32 +19,6 @@ export default function ProductFilter({
 	pageSize,
 	searchString,
 }) {
-	const options = [
-		[
-			{
-				value: '1',
-				label: 'Nome (A-Z)',
-			},
-			{
-				value: '2',
-				label: 'Nome (Z-A)',
-			},
-		],
-		[
-			{
-				value: '2',
-				label: '2',
-			},
-			{
-				value: '4',
-				label: '4',
-			},
-			{
-				value: '6',
-				label: '6',
-			},
-		],
-	];
 	return (
 		<>
 			<SearchBox>
@@ -63,14 +40,14 @@ export default function ProductFilter({
 			</SearchBox>
 			<div className="products__pageOrdenation">
 				<SelectFilter
-					options={options[0]}
+					options={selectOptions[0]}
 					label="Ordernar por:"
 					iconScale={1}
 					handleChange={handleChangeOrder}
 					value={order}
 				/>
 				<SelectFilter
-					options={options[1]}
+					options={selectOptions[1]}
 					label="Exibicação:"
 					iconScale={1.6}
 					handleChange={handleChangePageSize}

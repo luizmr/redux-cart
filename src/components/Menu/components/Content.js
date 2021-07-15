@@ -45,7 +45,7 @@ const MenuButton = styled.button`
 	}
 `;
 
-export default function Content() {
+const Content = () => {
 	const history = useHistory();
 	const MenuItems = [
 		{
@@ -135,4 +135,6 @@ export default function Content() {
 			))}
 		</div>
 	);
-}
+};
+
+export default Content;

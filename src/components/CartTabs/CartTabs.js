@@ -3,7 +3,7 @@ import React from 'react';
 // material-ui/icons
 import { Button } from '@material-ui/core';
 
-export default function CartTabs({ tabArray, activeArray, handleChangeTab }) {
+const CartTabs = ({ tabArray, activeArray, handleChangeTab }) => {
 	return (
 		<div className="cart__tabs">
 			{tabArray.map((obj) => (
@@ -17,4 +17,6 @@ export default function CartTabs({ tabArray, activeArray, handleChangeTab }) {
 			))}
 		</div>
 	);
-}
+};
+
+export default CartTabs;

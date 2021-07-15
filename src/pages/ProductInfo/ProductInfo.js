@@ -33,6 +33,7 @@ const ProductInfo = ({ cart, removeAllFromCart }) => {
 				<CartButtons
 					handleDeleteItems={removeAllFromCart}
 					cart={cart}
+					toPayment={false}
 				/>
 				<div className="products__pageContent">
 					<div className="product__cardInfo">

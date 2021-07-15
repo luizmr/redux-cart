@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoDivStyled from './styles';
 
-export default function InfoDiv({ title, info, spanClass, subtitle }) {
+const InfoDiv = ({ title, info, spanClass, subtitle }) => {
 	return (
 		<InfoDivStyled>
 			<p>
@@ -16,4 +16,6 @@ export default function InfoDiv({ title, info, spanClass, subtitle }) {
 			<span className={`${spanClass}`}>{info}</span>
 		</InfoDivStyled>
 	);
-}
+};
+
+export default InfoDiv;
