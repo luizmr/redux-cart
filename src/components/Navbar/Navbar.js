@@ -20,7 +20,6 @@ const Navbar = ({ user, cart }) => {
 	const history = useHistory();
 	useEffect(() => {
 		if (cart.length) {
-			console.log(ReducePrice(cart));
 			setFinalPrice(ReducePrice(cart));
 		} else {
 			setFinalPrice(0);
