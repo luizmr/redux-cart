@@ -8,8 +8,9 @@ import Client from './data/client.json';
 import { connect } from 'react-redux';
 import { setUser } from './store/Authentication/auth-actions';
 
-const App = ({ user }) => {
+const App = ({ user, setUser }) => {
 	useEffect(() => {
+		console.log(user, '12');
 		if (!user) {
 			localStorage.setItem('client', JSON.stringify(Client.client));
 			setUser(Client.client);

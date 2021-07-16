@@ -20,7 +20,7 @@ const ProductInfo = ({ cart, removeAllFromCart }) => {
 
 	useEffect(() => {
 		const productFound = ProductsData.find(
-			(obj) => obj.cod === Number(productId),
+			(obj) => obj.cod === Number(productId) && obj.quantityAvailable > 0,
 		);
 		if (productFound) {
 			setProduct(productFound);
@@ -36,13 +36,19 @@ const ProductInfo = ({ cart, removeAllFromCart }) => {
 					toPayment={false}
 				/>
 				<div className="products__pageContent">
-					<div className="product__cardInfo">
-						{product ? (
-							<ProductFullCard obj={product} key={productId} />
-						) : (
-							<p>produto nao encontrado</p>
-						)}
-					</div>
+					{product ? (
+						<ProductFullCard obj={product} key={productId} />
+					) : (
+						<div className="products__cards">
+							<div className="not-found">
+								<p>
+									Desculpa, mas o produto procurado não pôde
+									ser encontrado ou encontra-se indisponível
+									em nosso estoque.{' '}
+								</p>
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

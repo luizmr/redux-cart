@@ -75,11 +75,9 @@
 			flex-direction: column;
 
 			.products__cards {
-				// display: grid;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: flex-start;
-				// grid-template-columns: 500px 500px;
 				width: 100%;
 				gap: 20px;
 

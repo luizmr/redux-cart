@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Menu from './components/Menu/Menu';
 import Cart from './pages/Cart/Cart';
 import ProductInfo from './pages/ProductInfo/ProductInfo';
+import NotFound from './pages/NotFound/NotFound';
 
 // utils
 import MediaQueryChecker from './utils/mediaQueryChecker';
@@ -44,6 +45,7 @@ export const Routes = () => {
 				<div className="routes">
 					<Switch>
 						{routeOptions.map((route) => CustomRoute({ ...route }))}
+						<Route path="*" component={NotFound} />
 					</Switch>
 				</div>
 			</div>
